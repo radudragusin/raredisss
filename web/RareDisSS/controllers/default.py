@@ -17,6 +17,7 @@ def index():
     """
     Test powerTable
     """
+    RUNQUERYPATH = "../master/code/runQuery/"
     session.data = []
     session.query = ""
     logfile = open('logs/'+str(response.session_id),'a')
@@ -41,25 +42,25 @@ def index():
             collection = "CHECKED"
             if request.vars.dis == "on" or request.vars.rer == "on":
                 if request.vars.dis == "on":
-                    os.system('sh runQueryDiseases.sh "'+request.vars.q+'" index_raregenet '+hashstring)
+                    os.system('sh '+RUNQUERYPATH+'runQueryDiseases.sh "'+request.vars.q+'" index_raregenet '+hashstring)
                     diseases = "CHECKED"
                 if request.vars.rer == "on":
-                    os.system('sh runQueryReranked.sh "'+request.vars.q+'" index_raregenet '+hashstring)
+                    os.system('sh '+RUNQUERYPATH+'runQueryReranked.sh "'+request.vars.q+'" index_raregenet '+hashstring)
                     reranking = "CHECKED"
             else:
-                os.system('sh runQuery.sh "'+request.vars.q+'" index_raregenet '+hashstring)
+                os.system('sh '+RUNQUERYPATH+'runQuery.sh "'+request.vars.q+'" index_raregenet '+hashstring)
         else:
             hashstring = hashlib.md5(request.vars.q+"index_rare"+str(time.time())).hexdigest()
             collection = ""
             if request.vars.dis == "on" or request.vars.rer == "on":
                 if request.vars.dis == "on":
-                    os.system('sh runQueryDiseases.sh "'+request.vars.q+'" index_rare '+hashstring)
+                    os.system('sh '+RUNQUERYPATH+'runQueryDiseases.sh "'+request.vars.q+'" index_rare '+hashstring)
                     diseases = "CHECKED"
                 if request.vars.rer == "on":
-                    os.system('sh runQueryReranked.sh "'+request.vars.q+'" index_rare '+hashstring)
+                    os.system('sh '+RUNQUERYPATH+'runQueryReranked.sh "'+request.vars.q+'" index_rare '+hashstring)
                     reranking = "CHECKED"
             else:
-                os.system('sh runQuery.sh "'+request.vars.q+'" index_rare '+hashstring)
+                os.system('sh '+RUNQUERYPATH+'runQuery.sh "'+request.vars.q+'" index_rare '+hashstring)
         db.t_result.truncate()
         db.t_result.import_from_csv_file(open(os.getcwd()+'/results/'+hashstring,'r'))
         for row in db().select(db.t_result.ALL):
