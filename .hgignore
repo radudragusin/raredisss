@@ -1,0 +1,9 @@
+syntax: glob
+
+web/RareDisSS/errors/**
+web/RareDisSS/sessions/**
+web/RareDisSS/cache/**
+*.class
+*.pyc
+*.zip
+*DS_Store
