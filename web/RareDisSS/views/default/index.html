@@ -1,0 +1,9 @@
+{{left_sidebar_enabled=right_sidebar_enabled=False}}
+{{extend 'layout.html'}}
+<form name="sf">
+<INPUT type="text" id="q" name="q" value="{{=query}}"/><br>
+<INPUT type="checkbox" id="c" name="c" {{=collection}}/> Include genetic diseases<br>
+</form>
+<div id="target">{{=timer}} seconds</div>
+<script src="/static/group_rows.js" type="text/javascript"></script>
+{{=table}}

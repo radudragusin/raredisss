@@ -1,0 +1,10 @@
+{
+  "indexPath": "../../indexes/",
+  "indexName": "index_raregenet",
+  "corpusPath": "../../trec/",
+  "corpusFiles": ["aboutcom","gard","hon","social","madisons","wikird","nord","orphanet","omim","wikisyn","ghr"],
+  "corpusClass": "trectext",
+  "memory": "500",
+  "stemmer": "krovetz",
+  "fields": ["title"]
+}

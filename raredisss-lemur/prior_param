@@ -1,0 +1,6 @@
+<parameters>
+  <index>index_similar_priors</index>
+  <name>orphan</name>
+  <input>priorvalues</input>
+  <memory>500m</memory>
+</parameters>

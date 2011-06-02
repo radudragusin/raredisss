@@ -1,0 +1,7 @@
+{{extend 'layout.html'}}
+
+<h2>Update result</h2>
+{{=A(T('show result'),_href=URL('result_read',args=request.args(0)))}}
+<br/>
+
+{{=form}}

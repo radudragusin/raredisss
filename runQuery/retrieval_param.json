@@ -1,0 +1,11 @@
+{
+  "indexPath": "../../indexes/",
+  "indexName": "index_raregenet",
+  "queryPath": "../../queries/",
+  "queryFile": "onequery.trec",
+  "rule": "method:dirichlet,mu:4000",
+  "nrResults": "20",
+  "resultPath": "../../results/",
+  "resultName": "results_raregenet",
+  "memory": "500"
+}

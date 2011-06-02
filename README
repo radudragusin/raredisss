@@ -1,0 +1,12 @@
+Download the CODE
+
+Run the following command after installing Mercurial on your OS:
+ > hg clone https://raredisss.googlecode.com/hg/ raredisss 
+where raredisss is the directory in which you would like to copy the code.
+
+Download the WIKI PAGES
+
+Run the following command after installing Mercurial on your OS:
+ > hg clone https://wiki.raredisss.googlecode.com/hg/ raredisss_wiki
+where raredisss_wiki is the directory in which you would like to copy the
+wiki pages.

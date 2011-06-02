@@ -1,0 +1,26 @@
+(dp1
+S'description'
+p2
+S'CHAR(512)'
+p3
+sS'price'
+p4
+S'DOUBLE'
+p5
+sS'name'
+p6
+S'CHAR(512)'
+p7
+sS'category_id'
+p8
+S'INTEGER REFERENCES category(id) ON DELETE CASCADE'
+p9
+sS'id'
+p10
+S'INTEGER PRIMARY KEY AUTOINCREMENT'
+p11
+sS'quantity'
+p12
+S'INTEGER'
+p13
+s.
