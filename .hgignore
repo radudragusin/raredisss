@@ -1,8 +1,11 @@
 syntax: glob
 
-web/RareDisSS/errors/**
-web/RareDisSS/sessions/**
-web/RareDisSS/cache/**
+web/RareDisSS_Stable/errors/**
+web/RareDisSS_Devel/errors/**
+web/RareDisSS_Stable/sessions/**
+web/RareDisSS_Devel/sessions/**
+web/RareDisSS_Stable/cache/**
+wev/RareDisSS_Devel/cache/**
 *.class
 *.pyc
 *.zip
