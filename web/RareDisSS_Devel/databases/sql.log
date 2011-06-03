@@ -1,0 +1,34 @@
+DELETE FROM t_result;
+DELETE FROM t_result;
+DELETE FROM sqlite_sequence WHERE name='t_result';
+success!
+DELETE FROM t_resdis;
+DELETE FROM sqlite_sequence WHERE name='t_resdis';
+success!
+DELETE FROM t_result;
+DELETE FROM sqlite_sequence WHERE name='t_result';
+success!
+DELETE FROM t_resdis;
+DELETE FROM sqlite_sequence WHERE name='t_resdis';
+success!
+DELETE FROM t_result;
+DELETE FROM sqlite_sequence WHERE name='t_result';
+success!
+DELETE FROM t_resdis;
+DELETE FROM sqlite_sequence WHERE name='t_resdis';
+success!
+DELETE FROM t_result;
+DELETE FROM sqlite_sequence WHERE name='t_result';
+success!
+DELETE FROM t_result;
+DELETE FROM sqlite_sequence WHERE name='t_result';
+success!
+DELETE FROM t_resdis;
+DELETE FROM sqlite_sequence WHERE name='t_resdis';
+success!
+DELETE FROM t_result;
+DELETE FROM sqlite_sequence WHERE name='t_result';
+success!
+DELETE FROM t_resdis;
+DELETE FROM sqlite_sequence WHERE name='t_resdis';
+success!

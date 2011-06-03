@@ -1,0 +1,27 @@
+{{extend 'layout.html'}}
+<h1>Disclaimers</h1>
+
+<b>General information</b>
+
+RareDisSS is an early prototype of a system that could guide healthcare professionals in their clinical diagnosis of rare diseases. The system is the result of a research project conducted by researchers from University of Copenhagen and Technical University of Denmark. 
+
+<b>Sources of content</b>
+
+The information indexed by the system is collected from:
+- Orphanet: an online rare disease and orphan drug data base. Copyright, INSERM 1997. Available on http://www.orpha.net
+- Wikipedia: The free encyclopedia. Wikimedia Foundation, Inc. Available on http://www.wikipedia.org
+- NORD Rare Disease Database and Organizational Database. The National Organization for Rare Disorders (NORD). Available on http://rarediseases.org/
+- The Genetic and Rare Diseases Information Center (GARD). Available on http://rarediseases.info.nih.gov/GARD
+- Swedish Information Centre for Rare Diseases. Swedish National Board of Health and Welfare. Available on http://www.socialstyrelsen.se/rarediseases
+- m-Power Rare Disease Database. Madisons Foundation. Available on http://www.madisonsfoundation.org/
+- Genetics Home Reference: A service of the U.S. National Library of Medicine. Available on: http://ghr.nlm.nih.gov/BrowseConditions
+- Health On the Net Foundation. Available on: http://www.hon.ch/HONselect/RareDiseases/
+- Online Mendelian Inheritance in Man, OMIM. McKusick-Nathans Institute of Genetic Medicine, Johns Hopkins University (Baltimore, MD) and National Center for Biotechnology Information, National Library of Medicine (Bethesda, MD). Available on: http://www.ncbi.nlm.nih.gov/omim/
+
+
+The authors cannot guarantee the validity of the information returned by the system. The system collects the information stored and maintained by third entities.
+
+<b>Warning!</b>
+
+The information returned by the system is not intended to substitute professional health care.
+The authors cannot be held responsible for harmful or erroneus use of any information found through RareDisSS.
