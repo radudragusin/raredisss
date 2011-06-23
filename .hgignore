@@ -12,3 +12,6 @@ web/RareDisSS_Devel/databases/**
 *.pyc
 *.zip
 *DS_Store
+*.sqlite
+*.log
+*.bak

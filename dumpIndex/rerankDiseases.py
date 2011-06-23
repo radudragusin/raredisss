@@ -19,6 +19,7 @@ def getFreqOfDiseaseInDoc(cd,freqForDoc):
 
 # Utility functions for reading initial results and writing the ranked diseases
 def readCSV(resultfile):
+	csv.field_size_limit(sys.maxint)
 	csvReader = csv.reader(open(resultfile,"rb"),delimiter=',')
 	results = []
 	for row in csvReader:
