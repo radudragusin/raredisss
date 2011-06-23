@@ -5,7 +5,9 @@ web/RareDisSS_Devel/errors/**
 web/RareDisSS_Stable/sessions/**
 web/RareDisSS_Devel/sessions/**
 web/RareDisSS_Stable/cache/**
-wev/RareDisSS_Devel/cache/**
+web/RareDisSS_Devel/cache/**
+web/RareDisSS_Stable/databases/**
+web/RareDisSS_Devel/databases/**
 *.class
 *.pyc
 *.zip
