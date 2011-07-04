@@ -1,0 +1,699 @@
+(dp1
+S'query'
+p2
+S'anemia'
+p3
+sS'data'
+p4
+(dp5
+S'response'
+p6
+(dp7
+S'raregenet'
+p8
+NsS'query'
+p9
+g3
+sS'timer'
+p10
+S'0.05 seconds'
+p11
+sS'results'
+p12
+(lp13
+(dp14
+S'docs'
+p15
+S'6736, 21, 6075, 886'
+p16
+sS'score'
+p17
+S'34'
+p18
+sS'disease'
+p19
+S'Aplastic Anemia'
+p20
+sS'rank'
+p21
+S'1'
+sa(dp22
+g15
+S'6442, 5219, 6485'
+p23
+sg17
+S'22'
+p24
+sg19
+S'Autoimmune Hemolytic Anemia'
+p25
+sg21
+S'2'
+sa(dp26
+g15
+S'21, 257, 7167'
+p27
+sg17
+S'17'
+p28
+sg19
+S'Aase Syndrome, Aase Smith Ii Syndrome, Blackfan Diamond Anemia, Blackfan Diamond Disease, Pure Red Cell Aplasia Congenital, Anemia Congenital Hypoplastic Blackfan Diamond Type'
+p29
+sg21
+S'3'
+sa(dp30
+g15
+S'413, 257, 7167'
+p31
+sg17
+S'11'
+p32
+sg19
+S'Diamond Blackfan Anemia'
+p33
+sg21
+S'4'
+sa(dp34
+g15
+S'5219, 7437, 7069'
+p35
+sg17
+S'3'
+sg19
+S'Lupus'
+p36
+sg21
+S'5'
+sa(dp37
+g15
+S'5259, 59, 5451'
+p38
+sg17
+S'3'
+sg19
+S'Sickle Cell Disease'
+p39
+sg21
+S'6'
+sa(dp40
+g15
+S'59, 5451'
+p41
+sg17
+S'34'
+p42
+sg19
+S'Sickle Cell Anemia'
+p43
+sg21
+S'7'
+sa(dp44
+g15
+S'5259, 6781'
+p45
+sg17
+S'22'
+p46
+sg19
+S'Megaloblastic Anemia'
+p47
+sg21
+S'8'
+sa(dp48
+g15
+S'6736, 21'
+p49
+sg17
+S'19'
+p50
+sg19
+S'Fanconi Anemia, Fanconi Pancytopenia'
+p51
+sg21
+S'9'
+sa(dp52
+g15
+S'5696, 9640'
+p53
+sg17
+S'16'
+p54
+sg19
+S'Sideroblastic Anemia'
+p55
+sg21
+S'10'
+p56
+sa(dp57
+g15
+S'5259, 6995'
+p58
+sg17
+S'11'
+p59
+sg19
+S'Biermer Disease, Pernicious Anemia, Addison Biermer Anemia'
+p60
+sg21
+S'11'
+p61
+sa(dp62
+g15
+S'6995, 6781'
+p63
+sg17
+S'4'
+sg19
+S'Anemia Megaloblastic'
+p64
+sg21
+S'12'
+p65
+sa(dp66
+g15
+S'9640, 6075'
+p67
+sg17
+S'3'
+sg19
+S'Myelodysplastic Syndrome'
+p68
+sg21
+S'13'
+p69
+sa(dp70
+g15
+S'9640, 6075'
+p71
+sg17
+S'3'
+sg19
+S'Myelodysplastic Syndromes'
+p72
+sg21
+S'14'
+p73
+sa(dp74
+g15
+S'5259, 6781'
+p75
+sg17
+S'3'
+sg19
+S'Vitamin B12 Deficiency'
+p76
+sg21
+S'15'
+p77
+sa(dp78
+g15
+S'5219, 7437'
+p79
+sg17
+S'2'
+sg19
+S'Hodgkin Lymphoma'
+p80
+sg21
+S'16'
+p81
+sa(dp82
+g15
+S'5219, 7437'
+p83
+sg17
+S'2'
+sg19
+S'Systemic Lupus Erythematosus'
+p84
+sg21
+S'17'
+p85
+sa(dp86
+g15
+S'5219, 7437'
+p87
+sg17
+S'2'
+sg19
+S'Nhl, Non Hodgkin Lymphoma'
+p88
+sg21
+S'18'
+p89
+sa(dp90
+g15
+S'6075'
+p91
+sg17
+S'33'
+p92
+sg19
+S'Pnh, Marchiafava Micheli Disease, Paroxysmal Nocturnal Hemoglobinuria'
+p93
+sg21
+S'19'
+p94
+sa(dp95
+g15
+S'5233'
+p96
+sg17
+S'31'
+p97
+sg19
+S'Thalassemia'
+p98
+sg21
+S'20'
+p99
+sa(dp100
+g15
+S'5233'
+p101
+sg17
+S'13'
+p102
+sg19
+S'Cooley Anemia, Beta Thalassemia'
+p103
+sg21
+S'21'
+p104
+sa(dp105
+g15
+S'5696'
+p106
+sg17
+S'7'
+sg19
+S'Congenital Sideroblastic Anemia'
+p107
+sg21
+S'22'
+p108
+sa(dp109
+g15
+S'5233'
+p110
+sg17
+S'6'
+sg19
+S'Alpha Thalassemia'
+p111
+sg21
+S'23'
+p112
+sa(dp113
+g15
+S'7069'
+p114
+sg17
+S'5'
+sg19
+S'Anemia Of Chronic Disease'
+p115
+sg21
+S'24'
+p116
+sa(dp117
+g15
+S'5233'
+p118
+sg17
+S'3'
+sg19
+S'Thalassemia Major'
+p119
+sg21
+S'25'
+p120
+sa(dp121
+g15
+S'5233'
+p122
+sg17
+S'3'
+sg19
+S'Alpha And Beta Thalassemia'
+p123
+sg21
+S'26'
+p124
+sa(dp125
+g15
+S'6736'
+p126
+sg17
+S'3'
+sg19
+S'Anemia Fanconi'
+p127
+sg21
+S'27'
+p128
+sa(dp129
+g15
+S'5233'
+p130
+sg17
+S'2'
+sg19
+S'Thalassemia Minor'
+p131
+sg21
+S'28'
+p132
+sa(dp133
+g15
+S'5233'
+p134
+sg17
+S'2'
+sg19
+S'Hemoglobin H Disease'
+p135
+sg21
+S'29'
+p136
+sa(dp137
+g15
+S'7167'
+p138
+sg17
+S'2'
+sg19
+S'Anemia Blackfan Diamond'
+p139
+sg21
+S'30'
+p140
+sa(dp141
+g15
+S'7437'
+p142
+sg17
+S'2'
+sg19
+S'Anemia Hemolytic Cold Antibody'
+p143
+sg21
+S'31'
+p144
+sa(dp145
+g15
+S'6485'
+p146
+sg17
+S'2'
+sg19
+S'Anemia Hemolytic Warm Antibody'
+p147
+sg21
+S'32'
+p148
+sa(dp149
+g15
+S'6995'
+p150
+sg17
+S'2'
+sg19
+S'Anemia Pernicious'
+p151
+sg21
+S'33'
+p152
+sa(dp153
+g15
+S'6442'
+p154
+sg17
+S'2'
+sg19
+S'Anemia Hemolytic Acquired Autoimmune'
+p155
+sg21
+S'34'
+p156
+sa(dp157
+g15
+S'5259'
+p158
+sg17
+S'2'
+sg19
+S'Cd, Celiac Sprue, Celiac Disease, Coeliac Disease, Nontropical Sprue, Idiopathic Steatorrhea, Gluten Induced Enteropathy, Gluten Sensitive Enteropathy'
+p159
+sg21
+S'35'
+p160
+sa(dp161
+g15
+S'5233'
+p162
+sg17
+S'1'
+sg19
+S'Bs, Bloom Syndrome'
+p163
+sg21
+S'36'
+p164
+sa(dp165
+g15
+S'5233'
+p166
+sg17
+S'1'
+sg19
+S'Lead Poisoning'
+p167
+sg21
+S'37'
+p168
+sa(dp169
+g15
+S'7167'
+p170
+sg17
+S'1'
+sg19
+S'Aase Syndrome'
+p171
+sg21
+S'38'
+p172
+sa(dp173
+g15
+S'6075'
+p174
+sg17
+S'1'
+sg19
+S'Budd Chiari Syndrome'
+p175
+sg21
+S'39'
+p176
+sa(dp177
+g15
+S'6075'
+p178
+sg17
+S'1'
+sg19
+S'Paroxysmal Nocturnal Hemoglobinuria Pnh'
+p179
+sg21
+S'40'
+p180
+sa(dp181
+g15
+S'6075'
+p182
+sg17
+S'1'
+sg19
+S'Pulmonary Hypertension'
+p183
+sg21
+S'41'
+p184
+sa(dp185
+g15
+S'6075'
+p186
+sg17
+S'1'
+sg19
+S'Portal Vein Thrombosis, Portal Hypertension Due To Intrahepatic Block'
+p187
+sg21
+S'42'
+p188
+sa(dp189
+g15
+S'7437'
+p190
+sg17
+S'1'
+sg19
+S'Cold Agglutinin Disease'
+p191
+sg21
+S'43'
+p192
+sa(dp193
+g15
+S'7437'
+p194
+sg17
+S'1'
+sg19
+S'Chronic Lymphocytic Leukemia'
+p195
+sg21
+S'44'
+p196
+sa(dp197
+g15
+S'7437'
+p198
+sg17
+S'1'
+sg19
+S'Mumps'
+p199
+sg21
+S'45'
+p200
+sa(dp201
+g15
+S'9640'
+p202
+sg17
+S'1'
+sg19
+S'Pyruvate Kinase Deficiency'
+p203
+sg21
+S'46'
+p204
+sa(dp205
+g15
+S'9640'
+p206
+sg17
+S'1'
+sg19
+S'Pyruvate Kinase Deficiency Of Erythrocytes, Hemolytic Anemia Due To Red Cell Pyruvate Kinase Deficiency'
+p207
+sg21
+S'47'
+p208
+sa(dp209
+g15
+S'5219'
+p210
+sg17
+S'1'
+sg19
+S'Ulcerative Colitis'
+p211
+sg21
+S'48'
+p212
+sa(dp213
+g15
+S'5219'
+p214
+sg17
+S'1'
+sg19
+S'Hodgkin Disease'
+p215
+sg21
+S'49'
+p216
+sa(dp217
+g15
+S'413'
+p218
+sg17
+S'1'
+sg19
+S'Stem Cell Transplantation'
+p219
+sg21
+S'50'
+p220
+sa(dp221
+g15
+S'5696'
+p222
+sg17
+S'1'
+sg19
+S'Pearson Syndrome'
+p223
+sg21
+S'51'
+p224
+sa(dp225
+g15
+S'5696'
+p226
+sg17
+S'1'
+sg19
+S'Sideroblastic Anemia X Linked, Pyridoxine Responsive Sideroblastic Anemia'
+p227
+sg21
+S'52'
+p228
+sa(dp229
+g15
+S'5696'
+p230
+sg17
+S'1'
+sg19
+S'Hemochromatosis, Hemochromatosis Familial'
+p231
+sg21
+S'53'
+p232
+sa(dp233
+g15
+S'21'
+p234
+sg17
+S'1'
+sg19
+S'Acquired Aplastic Anemia'
+p235
+sg21
+S'54'
+p236
+sa(dp237
+g15
+S'21'
+p238
+sg17
+S'1'
+sg19
+S'Dkc, Dyskeratosis Congenita'
+p239
+sg21
+S'55'
+p240
+sasS'session_id'
+p241
+S'89.123.39.111-97c6888c-e310-48f9-83c5-3c554d897ae7'
+p242
+sssS'hashstring'
+p243
+S'6d1e65991f390ae445735ffbfa345f74'
+p244
+s.

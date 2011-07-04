@@ -1,0 +1,36 @@
+{{
+from reportlab.platypus import *
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.rl_config import defaultPageSize
+from reportlab.lib.units import inch, mm
+from reportlab.lib.enums import TA_LEFT, TA_RIGHT, TA_CENTER, TA_JUSTIFY
+from reportlab.lib import colors
+from uuid import uuid4
+from cgi import escape
+import os
+
+query = session.data["response"]["query"]
+index = "only the rare"
+if str(session.data["response"]["raregenet"]) == "on": index = "the rare and genetic"
+
+styles = getSampleStyleSheet()
+tmpfilename=os.path.join(request.folder,'private',str(uuid4()))
+doc = SimpleDocTemplate(tmpfilename)
+story = []
+story.append(Paragraph("Report for search query:\n",styles["Title"]))
+story.append(Paragraph(query,styles["Title"]))
+
+story.append(Paragraph("Using "+index+" dataset.",styles["Heading2"]))
+
+story.append(Paragraph("List of relevant diseases:",styles["Heading2"]))
+
+for d in session.data["response"]["results"]: story.append(Paragraph(str(d["rank"])+":"+str(d["disease"]),styles["Normal"]))
+
+story.append(Spacer(1,2*inch))
+doc.build(story)
+data = open(tmpfilename,"rb").read()
+os.unlink(tmpfilename)
+response.headers['Content-Type']='application/pdf'
+response.write(data,escape=False)
+pass
+}}
