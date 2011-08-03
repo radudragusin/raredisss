@@ -345,7 +345,7 @@ h6 {font-size: 0.8em;}
 /*body {background-color: #000;}*/
 #container, #header, #page, #content, #statusbar,
 #footer, #wrapper { display:block; line-height: 170%; }
-#wrapper {width: 900px;}
+#wrapper {width: 90%; max-width: 900px;}
 #container {
     margin: 0 auto;
     padding: 0;
@@ -381,7 +381,6 @@ h6 {font-size: 0.8em;}
     height: 24px; 
     margin: 0;
     padding: 0;
-    line-height: 1.5em;
     }
 #searchbar input.button { 
     position: absolute;

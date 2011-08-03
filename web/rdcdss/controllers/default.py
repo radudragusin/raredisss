@@ -19,6 +19,7 @@ def index():
     """
     RUNQUERYPATH = "../master/code/runQuery/"
     session.data = {}
+    session.extraInfo = []
     session.query = ""
     logfile = open('logs/'+str(response.session_id),'a')
     logfile.write("SESSION: "+str(response.session_id)+"\n")
@@ -51,6 +52,7 @@ def index():
         rows = []
         for row in db().select(db.t_resdis.ALL):
             session.data["response"]["results"].append({"rank":row.f_rank,"disease":row.f_disease,"score":row.f_freq,"docs":row.f_docnos})
+            session.extraInfo.append([row.f_docnos])
             rows.append(row)
         session.hashstring = hashstring
         session.query = query
@@ -124,15 +126,17 @@ def createDiseaseTable(data):
     distable.dtfeatures['bInfo'] =  False
     distable.dtfeatures['bFilter'] =  False
     
-    distable.truncate = 60 
+    distable.truncate = 80 
     distable.headers = 'labels'
     distable.keycolumn = 't_resdis.id'
     distable.showkeycolumn = False
-    
+    distable.extra = dict(
+                       details={'detailscolumns':'t_resdis.f_docnos','detailscallback':URL('display_details.load')}
+                       )
     distable.columns = ['t_resdis.f_rank',
                      't_resdis.f_disease',
-                     't_resdis.f_freq',
-                     't_resdis.f_docnos',
+                     #'t_resdis.f_freq',
+                     #'t_resdis.f_docnos',
                      ]
                      
     return distable.create()
@@ -155,19 +159,19 @@ def display_details():
             cols = request.vars[k]
 
     value = int(key.split('.')[2])
-    rows = cPickle.load(response.session_file)['data']
+    rows = cPickle.load(response.session_file)['extraInfo']
     row = rows[value-1]
 
     logfile = open('logs/'+str(response.session_id),'a')
     logfile.write("OPENED DETAILS FOR RANK: "+str(value)+"\n")
     logfile.close()
     
-    details = DIV(B("Title: "))
+    details = DIV(B("Documents: "))
     details.append(P(str(row[0])))
-    details.append(B("URL: "))
-    details.append(P(A(str(row[1]),_href=str(row[1]),_target='_blank')))
-    details.append(B("Text: "))
-    details.append(P(str(row[2])))
+    #details.append(B("URL: "))
+    #details.append(P(A(str(row[1]),_href=str(row[1]),_target='_blank')))
+    #details.append(B("Text: "))
+    #details.append(P(str(row[2])))
     return details
 
 def feedback():

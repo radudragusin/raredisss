@@ -6,9 +6,13 @@ import csv
 
 # Utility functions
 def findDocInFreqList(docno,docFreq):
-	freqForDoc = [f for f in docFreq if f[0]==docno][0]
+	print "docno=",docno
+	print "docfreq=",type(docFreq)
+	freqForDoc = [f for f in docFreq if f[0]==docno]
+	if len(freqForDoc) == 0:
+		return 0
 	print "Frequency list for document "+docno+": "+str(freqForDoc)
-	return freqForDoc
+	return freqForDoc[0]
 def getDiseasesInDoc(freqForDoc):
 	diseaseList = []
 	for tup in freqForDoc[1]:
@@ -40,24 +44,34 @@ def rerank(resultfile,prefix):
 	topDiseases = []
 	for i,res in enumerate(results):
 		docno = res[1]
+		#Get frequency list for result (document)
 		freqForDoc = findDocInFreqList(docno,docFreq)
+		if freqForDoc == 0:
+			continue
+		#Get list of diseases in document
 		cds = getDiseasesInDoc(freqForDoc)
+		#Compute number of diseases in document
+		nr_cds = len(cds)
 		for cd in cds:
+			#Get frequency for each disease in doc
 			cdFreq = getFreqOfDiseaseInDoc(cd,freqForDoc)
 			print str(cd) + ': '+ str(cdFreq)
+			#Search for the disease in the ranked list of diseases
+			# if disease found, update the score
+			# if not, add an entry for it
 			found = -1
 			for j,dis in enumerate(topDiseases):
 				if cd == dis[0]:
 					found = j
 					break
 			if found == -1: 
-				topDiseases.append([cd,int(cdFreq),[docno]])
+				topDiseases.append([cd,float(cdFreq)/float(nr_cds),[docno]])
 			else:
-				topDiseases[found][1] += int(cdFreq)
+				topDiseases[found][1] += float(cdFreq)/float(nr_cds)
 				topDiseases[found][2].append(docno)
 
-	# Sort diseases by appearances in docs, and then by total frequency
-	topDiseases.sort(key=lambda x: (len(x[2]),x[1]))
+	# Sort diseases by frequency score, and then by nr of docs in which they appear
+	topDiseases.sort(key=lambda x: (x[1],len(x[2])))
 	topDiseases.reverse()
 	
 	# Transform disease names list into readable strings
