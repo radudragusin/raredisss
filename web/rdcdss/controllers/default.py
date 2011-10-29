@@ -52,7 +52,8 @@ def index():
         rows = []
         for row in db().select(db.t_resdis.ALL):
             session.data["response"]["results"].append({"rank":row.f_rank,"disease":row.f_disease,"score":row.f_freq,"docs":row.f_docnos})
-            session.extraInfo.append([row.f_docnos])
+            session.extraInfo.append([row.f_disease,row.f_docnos])
+            #session.extraInfo.append([row.f_docnos])
             rows.append(row)
         session.hashstring = hashstring
         session.query = query
@@ -131,7 +132,8 @@ def createDiseaseTable(data):
     distable.keycolumn = 't_resdis.id'
     distable.showkeycolumn = False
     distable.extra = dict(
-                       details={'detailscolumns':'t_resdis.f_docnos','detailscallback':URL('display_details.load')}
+                       details={'detailscolumns':'t_resdis.f_disease,t_resdis.f_docnos','detailscallback':URL('display_details.load')}
+                       #details={'detailscolumns':'t_resdis.f_docnos','detailscallback':URL('display_details.load')}
                        )
     distable.columns = ['t_resdis.f_rank',
                      't_resdis.f_disease',
@@ -166,8 +168,13 @@ def display_details():
     logfile.write("OPENED DETAILS FOR RANK: "+str(value)+"\n")
     logfile.close()
     
-    details = DIV(B("Documents: "))
+    details = DIV(B("Disease names: "))
     details.append(P(str(row[0])))
+    details.append(DIV(B("Document ids: ")))
+    details.append(P(str(row[1])))
+    #details = DIV(B("Disease article ids: "))
+    #details.append(P(str(row[1])))
+
     #details.append(B("URL: "))
     #details.append(P(A(str(row[1]),_href=str(row[1]),_target='_blank')))
     #details.append(B("Text: "))
